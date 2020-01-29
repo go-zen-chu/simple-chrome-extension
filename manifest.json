@@ -1,0 +1,20 @@
+{
+    "name": "Sample Chrome Extension",
+    "version": "1.0",
+    "description": "this is sample",
+    "permissions": ["activeTab","storage"],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [{
+        "matches": ["*://*/*"],
+        "js":["js/content-script.js"]
+    }],
+    "browser_action": {
+        "default_title": "simple sample",
+        "default_popup": "popup.html"
+    },
+    "manifest_version": 2
+}
+
